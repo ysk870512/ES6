@@ -3,6 +3,10 @@ const babel = require('gulp-bebel');
 //걸프 의존성을 여기 씁니다.
 
 gulp.task('default', function(){
+    //ESLint를 실행합니다.
+    gulp.src(["es6/**/*.js","public/es6/**/*.js"])
+        .pipe(eslint())
+        .pipe(eslint.format());
     //노드 소스
     gulp.src("es6/**/*.js")
         .pipe(babel())
