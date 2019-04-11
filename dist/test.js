@@ -21,10 +21,6 @@ function say({
   console.log(`${subject} ${verb} ${object}`);
 }
 
-;
-
 for (let s of sentences) {
   say(s);
 }
-
-;
